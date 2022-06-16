@@ -1,0 +1,32 @@
+
+{% extends "management\AddUser.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+ <div style ="margin: 50px">
+    <div class = "container">
+        <h1>Authorized User Only</h1>
+        <p>Welcome to your Portal </p>  
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+    
+         <div>
+            <button type="submit" class="btn btn-primary submit">Login</button>
+        </div> 
+                    <p>Keep your credentials secure</p>
+        <div>
+            <p>Not registerd yet as a staff?, click the link below to register</p>
+            <a href="{% url 'management:staffview' %}"><b>Register</b></a>
+        </div> 
+                        <p>Keep your credentials secure</p>
+                        
+     </form>
+    </div>
+    
+</div>
+ {% endblock content %}
+
+

@@ -1,0 +1,27 @@
+{% extends "management\AddUser.html" %}
+
+
+{% block content %}
+
+
+
+
+
+
+<div style = "color:white;padding: 100px; margin: 100px;text-align:center">
+ 
+<h3>WELCOME TO THE MANAGEMENT PORTAL, SELECT YOUR OPTION FROM THE AVAILABLE OPTIONS</h3>
+
+<ul style="list-style-type:none">
+  <li><a href="{% url 'management:loginview' %}">Login</a></li>
+  <li><a href="{% url 'management:staffview' %}">Register</a></li>
+  <li><a href="{% url 'management:adduserview' %}">Add User</a></li>
+  <li><a href="{% url 'management:portalview' %}">Back to Portal</a></li>
+  <li><a href="{% url 'home:homeview' %}">XYZ HOTEL</a></li>
+  </ul>
+        <p>To add new customer, you must first login into your portal</P>
+
+</div>>
+
+
+{% endblock content %}
